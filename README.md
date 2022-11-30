@@ -2,20 +2,43 @@
 
 See also: Clean Architecture: <https://github.com/boeschenstein/clean-architecture>
 
+## Domain Model
+
+- https://learn.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/microservice-domain-model
+- Good DDD example: https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/src/Services/Ordering
+
+### Domain Entity Pattern
+
+- https://learn.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/microservice-domain-model#the-domain-entity-pattern
+- Entities (Properties only) + Logic = Domain Entities
+
+### Rich Model vs Anemic Model
+
+- https://learn.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/microservice-domain-model#rich-domain-model-versus-anemic-domain-model
+- Good example (entities contain logic): https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/src/Services/Ordering
+
+## Layers
+
+- https://learn.microsoft.com/en-us/dotnet/architecture/microservices/multi-container-microservice-net-applications/microservice-application-design
+
+### Dependency Inversion: Repository contracts (interfaces) in the domain model layer
+
+- https://learn.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/seedwork-domain-model-base-classes-interfaces#repository-contracts-interfaces-in-the-domain-model-layer
+
 ## Compare DDD - Clean Architecture
 
 Topic                     | DDD                | Clean Architecture
 --                        | --                 | -- 
 Most outer layer          | Web, Api, Gui, ... | Web, Api, Gui, ...
-Application Service Layer | required           | relaxed (add more layers if you need it)
-Domain Service Layer      | required           | recommended
+Application Service Layer | ?                  | relaxed (add more layers if you need it)
+Domain Service Layer      | ?                  | recommended
 Infrastructure Layer 1)   | x                  | x
-Most inner layer          | Entity             | Entity
+Most inner layer          | Domain Entity      | Domain Entity
 Domain Events             | required           | recommended
 CQS                       | required           | recommended
 Seedwork                  | required           | recommended
 
-`1) Dependency inversion: Infrastructure Layer implements the (example: Repository) Interface, defined in Domain Service Layer`
+`1) Dependency inversion: Infrastructure Layer implements the interface (example: Repository). The interface is defined in Domain Service Layer`
 
 ## Information
 
@@ -31,3 +54,4 @@ Seedwork                  | required           | recommended
     - Martin Fowler: https://martinfowler.com
     - Greg Young: CQRS, Eventsourcing
     - Udi Dahan: https://udidahan.com
+- Seedwork: https://learn.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/seedwork-domain-model-base-classes-interfaces
