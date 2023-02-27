@@ -2,6 +2,11 @@
 
 See also: Clean Architecture: <https://github.com/boeschenstein/clean-architecture>
 
+## Introduction
+
+- STOP dogmatic Domain Driven Design: <https://piped.kavin.rocks/watch?v=8XmXhXH_q90>
+- Domain-Driven Design in 150 Seconds: <https://piped.kavin.rocks/watch?v=8Z5IAkWcnIw>
+
 ## Domain Model
 
 - https://learn.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/microservice-domain-model
